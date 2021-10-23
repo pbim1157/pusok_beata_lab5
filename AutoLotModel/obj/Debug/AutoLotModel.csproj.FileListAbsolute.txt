@@ -1,0 +1,11 @@
+D:\IE\AN3\Medii de programare\Laborator\AutoLotModel\bin\Debug\AutoLotModel.dll.config
+D:\IE\AN3\Medii de programare\Laborator\AutoLotModel\bin\Debug\AutoLotModel.dll
+D:\IE\AN3\Medii de programare\Laborator\AutoLotModel\bin\Debug\AutoLotModel.pdb
+D:\IE\AN3\Medii de programare\Laborator\AutoLotModel\bin\Debug\EntityFramework.dll
+D:\IE\AN3\Medii de programare\Laborator\AutoLotModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\IE\AN3\Medii de programare\Laborator\AutoLotModel\bin\Debug\EntityFramework.xml
+D:\IE\AN3\Medii de programare\Laborator\AutoLotModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\IE\AN3\Medii de programare\Laborator\AutoLotModel\obj\Debug\AutoLotModel.csproj.AssemblyReference.cache
+D:\IE\AN3\Medii de programare\Laborator\AutoLotModel\obj\Debug\AutoLotModel.csproj.CoreCompileInputs.cache
+D:\IE\AN3\Medii de programare\Laborator\AutoLotModel\obj\Debug\AutoLotModel.dll
+D:\IE\AN3\Medii de programare\Laborator\AutoLotModel\obj\Debug\AutoLotModel.pdb
