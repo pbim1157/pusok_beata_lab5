@@ -286,5 +286,56 @@ namespace pusok_beata_lab5
                              };
             customerOrdersViewSource.Source = queryOrder.ToList();
         }
+
+        private void SetValidationBinding()
+        {
+            Binding firstNameValidationBinding = new Binding();
+            firstNameValidationBinding.Source = customerViewSource;
+            firstNameValidationBinding.Path = new PropertyPath("FirstName");
+            firstNameValidationBinding.NotifyOnValidationError = true;
+            firstNameValidationBinding.Mode = BindingMode.TwoWay;
+            firstNameValidationBinding.UpdateSourceTrigger =
+UpdateSourceTrigger.PropertyChanged;
+            //string required 
+            firstNameValidationBinding.ValidationRules.Add(new StringNotEmpty());
+            firstnameTextBox.SetBinding(TextBox.TextProperty,
+firstNameValidationBinding);
+
+            Binding lastNameValidationBinding = new Binding();
+            lastNameValidationBinding.Source = customerViewSource;
+            lastNameValidationBinding.Path = new PropertyPath("LastName");
+            lastNameValidationBinding.NotifyOnValidationError = true;
+            lastNameValidationBinding.Mode = BindingMode.TwoWay;
+            lastNameValidationBinding.UpdateSourceTrigger =UpdateSourceTrigger.PropertyChanged;
+            //string min length validator 
+            lastNameValidationBinding.ValidationRules.Add(new StringMinLengthValidator());
+            lastNameTextBox.SetBinding(TextBox.TextProperty,lastNameValidationBinding); //setare binding nou 
+
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            action = ActionState.Edit;
+            BindingOperations.ClearBinding(firstnameTextBox, TextBox.TextProperty);
+            BindingOperations.ClearBinding(lastNameTextBox, TextBox.TextProperty);
+
+            SetValidationBinding();
+        }
+
+        private void btnNew_Click(object sender, RoutedEventArgs e)
+        {
+            action = ActionState.New;
+
+            customerDataGrid.UnselectAllCells();
+            tbCtrlAutoLot.Items.Refresh();
+
+            //Clear the content of the textboxes and enable first and last name
+            SetValidationBinding();
+            custIdTextBox.Clear();
+            firstnameTextBox.Clear();
+            lastNameTextBox.Clear();
+            firstnameTextBox.IsEnabled = true;
+            lastNameTextBox.IsEnabled = true;
+        }
     }
 }
